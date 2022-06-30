@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+
+     <title>Shortener</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  
+</head>
+<body>
+  <style>
+    .container-fluid {
+    padding-right: 71px;
+    padding-left: 54px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 7px;
+    margin-bottom: 6px;
+}
+body {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #0d1112;
+    {{!-- background-color: #13cede; --}}
+    background-image: url('https://img.freepik.com/free-vector/5g-networking-technology-background-with-blue-digital-line_53876-119505.jpg?w=2000');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    color: #FFFFFF;
+}
+
+    /* CSS Reset */
+    .form-group input {
+        font-family: 'Baloo Bhai', cursive;
+        text-align: center;
+        display: block;
+        width: 508px;
+        padding: 1px;
+        border: 2px solid black;
+        margin: 0px auto;
+        font-size: 25px;
+        border-radius: 8px;
+        color: #0d1112;
+    }
+    .btn {
+        font-family: 'Baloo Bhai', cursive;
+        
+        background-color: black;
+        color: white;
+        padding: 4px 14px;
+        border: 2px solid grey;
+        border-radius: 10px;
+        font-size: 20px;
+        cursor: pointer;
+        
+    }
+    .btn {
+      display:block;
+margin:0 auto;
+    }
+
+    .l{
+      font-family: 'Baloo Bhai', cursive;
+        text-align: center;
+        display: block;
+        width: 508px;
+        padding: 1px;
+        border: 2px solid black;
+        margin: 33px auto;
+        font-size: 25px;
+        border-radius: 8px;
+        color: #0d1112;
+        background-color: rgba(229, 225, 235, 0.96);
+    }
+
+
+</style>
+
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="/">URL Shortener</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="/">Home</a></li>
+      <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Resources <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="#">Page 1-1</a></li>
+          <li><a href="#">Page 1-2</a></li>
+          <li><a href="#">Page 1-3</a></li>
+        </ul>
+      </li>
+      <li><a href="#">About</a></li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+      {{#if vart }}
+      <li><a href="/registration"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+      <li><a href="/login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      {{else }}
+      <li><a><span class="glyphicon glyphicon-user"></span> &nbsp;{{named}}</a></li>
+      {{/if}}
+    </ul>
+  </div>
+</nav>
+
+<div class="container">
+  <h1>Welcome in URL-Shortener </h1>
+  <p>“It is url shortering website where you can convert your large in size URL into tiny links”</p>
+</div>
+
+
+        <form action="/" method="post">
+            <br>
+            <br>
+            <br>
+            <div class="form-group">
+                <input type="text" name="url" placeholder="Enter your URL ">
+            </div>
+           
+            <div class="form-group1">
+            <button class="btn">Submit</button>
+
+            </div>
+        </form>
+    
+        {{#if val }}
+        <div class="l">
+            <p>Shortten Url : <a href="http://localhost:8000/{{ccode}}">http://localhost:8000/{{ccode}}</a></p>
+            
+        </div>
+        
+        {{/if}}
+
+        
+</body>
+
+
+
+
+
+</html>
+
